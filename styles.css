@@ -253,11 +253,11 @@ a {
 }
 
 .mobile-menu {
-    position: fixed;
-    top: var(--nav-height);
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100dvh - var(--nav-height));
     background: var(--color-bg-primary);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1078,6 +1078,7 @@ a {
 
 @media (max-width: 480px) {
     :root {
+        --nav-height: 64px;
         --space-lg: 1rem;
         --space-xl: 1.25rem;
         --space-2xl: 1.5rem;
@@ -1085,13 +1086,6 @@ a {
         --space-4xl: 3rem;
     }
     
-    .nav-container {
-        height: 64px;
-    }
-    
-    .mobile-menu {
-        top: 64px;
-    }
     
     .hero-actions {
         flex-direction: column;

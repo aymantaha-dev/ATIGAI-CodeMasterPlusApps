@@ -1095,6 +1095,13 @@ a {
     height: 20px;
 }
 
+@media (min-width: 769px) {
+    .menu-toggle,
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
 /* ============================================
    Responsive Design
    ============================================ */

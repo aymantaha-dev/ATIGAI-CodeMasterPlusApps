@@ -266,3 +266,88 @@
         border-radius: var(--radius-lg);
     }
 }
+
+.section-icon {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+}
+
+.section-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Releases Page */
+.releases-layout {
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.release-hero-card,
+.release-card,
+.release-notes-panel {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+}
+
+.release-hero-card {
+    padding: var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-lg);
+}
+
+.release-hero-card h2 {
+    margin: var(--space-md) 0;
+}
+
+.release-hero-card p,
+.release-card p,
+.release-notes-panel p {
+    color: var(--color-text-secondary);
+}
+
+.release-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
+}
+
+.release-card {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.release-card h3,
+.release-notes-panel h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.release-notes-panel {
+    padding: var(--space-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+    .release-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .release-hero-card,
+    .release-notes-panel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

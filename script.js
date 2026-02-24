@@ -12,16 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
             var isActive = force !== undefined ? force : !mobileMenu.classList.contains('active');
             mobileMenu.classList.toggle('active', isActive);
             menuToggle.classList.toggle('active', isActive);
-            menuToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
             document.body.style.overflow = isActive ? 'hidden' : '';
         }
-
+        
         menuToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             toggleMenu();
         });
-
+        
         // Close when clicking links
         var links = mobileMenu.getElementsByTagName('a');
         for (var i = 0; i < links.length; i++) {
@@ -29,19 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 toggleMenu(false);
             });
         }
-
-        // Close on outside click and on resize to desktop
-        document.addEventListener('click', function(e) {
-            if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                toggleMenu(false);
-            }
-        });
-
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                toggleMenu(false);
-            }
-        });
     }
     
     // Navbar scroll effect

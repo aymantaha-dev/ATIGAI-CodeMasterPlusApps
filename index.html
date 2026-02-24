@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Master+ — AI-Powered Development Environment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M130.000 22.830 C 112.375 22.995,97.792 23.298,96.200 23.534 C 92.505 24.080,88.974 24.704,87.000 25.159 C 83.246 26.025,80.174 26.918,79.820 27.247 C 79.611 27.441,79.037 27.600,78.544 27.600 C 78.051 27.600,77.536 27.780,77.400 28.000 C 77.264 28.220,76.876 28.400,76.538 28.400 C 76.199 28.400,73.847 29.390,71.312 30.600 C 68.776 31.810,66.616 32.800,66.511 32.800 C 66.149 32.800,56.190 39.006,55.600 39.599 C 55.490 39.709,54.590 40.425,53.600 41.188 C 36.972 54.015,25.040 75.465,22.444 97.200 C 21.150 108.033,21.155 292.490,22.450 303.200 C 24.525 320.366,32.364 337.643,43.551 349.708 C 44.348 350.567,45.145 351.526,45.322 351.839 C 46.578 354.057,59.194 363.633,65.381 367.064 C 71.420 370.413,79.913 373.768,84.856 374.757 C 85.815 374.948,87.950 375.381,89.600 375.718 C 98.009 377.434,95.807 377.401,200.000 377.376 C 309.626 377.349,301.375 377.530,314.209 374.871 C 319.356 373.805,329.579 369.956,333.718 367.526 C 334.772 366.907,335.724 366.400,335.833 366.400 C 336.374 366.400,345.328 360.133,347.600 358.164 C 351.862 354.472,352.083 354.262,355.084 351.061 C 365.236 340.234,372.357 327.290,375.583 313.800 C 378.377 302.114,378.200 309.751,378.200 201.000 C 378.200 94.063,378.276 97.924,375.954 87.600 C 374.219 79.886,370.028 69.573,366.363 64.000 C 360.776 55.505,359.412 53.751,354.235 48.400 C 350.792 44.842,347.392 41.757,345.443 40.423 C 344.979 40.106,344.510 39.733,344.400 39.595 C 343.166 38.042,331.872 31.756,325.000 28.797 C 319.679 26.506,310.868 24.413,302.000 23.333 C 296.194 22.626,186.311 22.305,130.000 22.830 M237.345 125.055 L 238.400 126.109 238.400 149.667 L 238.400 173.226 239.300 173.593 C 239.816 173.804,249.122 173.927,261.134 173.880 L 282.067 173.800 282.802 174.706 C 283.961 176.133,284.069 178.981,283.930 204.333 L 283.800 228.066 282.494 229.233 C 281.560 230.067,280.761 230.405,279.694 230.419 C 278.872 230.430,269.290 230.475,258.400 230.519 L 238.600 230.600 238.400 253.600 C 238.290 266.250,238.059 276.880,237.887 277.221 C 236.868 279.246,237.668 279.200,203.738 279.198 L 172.200 279.196 171.000 278.236 L 169.800 277.276 169.688 254.061 C 169.582 232.331,169.530 230.832,168.873 230.623 C 168.487 230.501,159.972 230.469,149.952 230.553 L 131.733 230.706 129.724 232.149 C 124.013 236.252,117.798 234.793,114.825 228.652 C 110.362 219.431,120.996 210.774,129.694 216.547 L 131.883 218.000 154.286 218.000 C 166.607 218.000,177.497 218.111,178.485 218.246 C 181.745 218.693,181.600 217.519,181.600 243.518 L 181.600 266.313 182.580 266.559 C 184.428 267.023,224.366 266.798,225.420 266.318 L 226.400 265.872 226.400 242.980 C 226.400 221.035,226.432 220.050,227.165 219.144 L 227.930 218.200 248.533 218.339 C 259.864 218.415,269.690 218.356,270.368 218.207 L 271.600 217.936 271.600 202.219 L 271.600 186.502 269.983 186.244 C 269.094 186.102,259.959 185.992,249.683 186.000 C 239.407 186.008,230.440 186.012,229.755 186.008 C 228.949 186.003,228.136 185.627,227.455 184.945 L 226.400 183.891 226.400 160.822 C 226.400 142.208,226.297 137.612,225.866 137.022 C 225.302 136.251,186.724 135.475,183.067 136.161 L 181.600 136.436 181.600 159.757 C 181.600 184.497,181.559 185.070,179.726 185.773 C 179.366 185.911,168.418 186.016,155.397 186.006 L 131.723 185.988 130.561 186.880 C 129.923 187.371,129.310 187.869,129.200 187.986 C 127.725 189.562,123.057 190.543,121.295 189.647 C 120.913 189.452,120.070 189.047,119.421 188.747 C 112.201 185.398,112.404 174.661,119.756 170.997 C 121.720 170.018,127.200 169.507,127.200 170.302 C 127.200 170.469,127.738 170.843,128.396 171.134 C 129.054 171.425,130.088 172.189,130.695 172.832 L 131.797 174.000 150.456 174.000 C 167.101 174.000,169.141 173.932,169.357 173.367 C 169.491 173.019,169.602 162.804,169.604 150.667 C 169.607 138.530,169.723 127.906,169.864 127.058 C 170.398 123.824,168.375 124.003,204.445 124.001 L 236.291 124.000 237.345 125.055" fill="currentColor"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-main">Code Master+</span>
+                    <span class="logo-sub">by ATIGAI</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links desktop-only">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#download" class="nav-link">Download</a>
+                <a href="changelog.html" class="nav-link">Changelog</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-actions desktop-only">
+                <a href="https://github.com/aymantaha-dev/ATIGAI-Code-Master" class="btn btn-ghost" target="_blank" rel="noopener">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="#download" class="btn btn-primary">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle mobile-only" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <a href="#features" class="mobile-link">Features</a>
+                <a href="#download" class="mobile-link">Download</a>
+                <a href="changelog.html" class="mobile-link">Changelog</a>
+                <a href="#about" class="mobile-link">About</a>
+                <div class="mobile-actions">
+                    <a href="https://github.com/aymantaha-dev/ATIGAI-Code-Master" class="btn btn-ghost btn-full" target="_blank" rel="noopener">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="#download" class="btn btn-primary btn-full">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-image-container">
+                <!-- Replace this URL with your actual image -->
+                <img src="https://camo.githubusercontent.com/2040be55a9df7b0c54d454fdb56403f155c1d2e90215483ebab77fcaced25754/68747470733a2f2f692e6962622e636f2f364a71374c397a562f312e6a7067" alt="Code Editor" class="hero-bg-image">
+                <div class="hero-overlay-left"></div>
+                <div class="hero-overlay-gradient"></div>
+            </div>
+        </div>
+        <div class="hero-content-wrapper">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-badge">Version 1.0.0</span>
+                        <span class="eyebrow-text">Now Available</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Build. Refactor. Scale.<br>
+                        <span class="title-highlight">With AI.</span>
+                    </h1>
+                    <p class="hero-description">
+                        The ultimate AI-powered desktop development environment. Generate, modify, and review entire software projects with the world's most advanced AI models.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn btn-primary btn-large">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download for Windows
+                        </a>
+                        <a href="#features" class="btn btn-secondary btn-large">Explore Features</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">AI Models</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Platforms</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Local-First</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Models Section -->
+    <section class="models-section">
+        <div class="container">
+            <div class="models-header">
+                <span class="section-eyebrow">Powered By</span>
+                <h2 class="models-title">Advanced AI Models</h2>
+            </div>
+            <div class="models-grid">
+                <div class="model-category">
+                    <h3 class="category-name">OpenAI</h3>
+                    <div class="model-tags">
+                        <span class="model-tag">GPT-5.2</span>
+                        <span class="model-tag">GPT-5.1</span>
+                        <span class="model-tag">GPT-5</span>
+                        <span class="model-tag">GPT-4.1</span>
+                        <span class="model-tag">GPT-4.1 Mini</span>
+                    </div>
+                </div>
+                <div class="model-category">
+                    <h3 class="category-name">Anthropic</h3>
+                    <div class="model-tags">
+                        <span class="model-tag">Claude Opus 4.5</span>
+                        <span class="model-tag">Claude Sonnet 4.5</span>
+                        <span class="model-tag">Claude Haiku 4.5</span>
+                    </div>
+                </div>
+                <div class="model-category">
+                    <h3 class="category-name">Moonshot AI</h3>
+                    <div class="model-tags">
+                        <span class="model-tag">Kimi K2.5</span>
+                        <span class="model-tag">Kimi K2</span>
+                        <span class="model-tag">Kimi K1.5</span>
+                    </div>
+                </div>
+                <div class="model-category">
+                    <h3 class="category-name">DeepSeek</h3>
+                    <div class="model-tags">
+                        <span class="model-tag">DeepSeek-V3.5</span>
+                        <span class="model-tag">DeepSeek-Coder V2</span>
+                        <span class="model-tag">DeepSeek Chat</span>
+                    </div>
+                </div>
+                <div class="model-category">
+                    <h3 class="category-name">Google</h3>
+                    <div class="model-tags">
+                        <span class="model-tag">Gemini 3.0 Pro</span>
+                        <span class="model-tag">Gemini 3.0 Flash</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Features</span>
+                <h2 class="section-title">Everything you need to build<br>production-ready software</h2>
+            </div>
+
+            <!-- Feature 1 -->
+            <div class="feature-row" data-feature="1">
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-number">01</span>
+                        <div class="feature-line"></div>
+                    </div>
+                    <h3 class="feature-title">Clean & Organized Interface</h3>
+                    <p class="feature-description">
+                        A modern, minimal, and structured workspace built for professional developers. Panels and layout are optimized for clarity and productivity.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Minimalist design philosophy</li>
+                        <li>Optimized panel layouts</li>
+                        <li>Distraction-free environment</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-wrapper">
+                        <img src="https://i.ibb.co/hRdNjrgB/Picsart-26-02-11-23-28-36-231.jpg" alt="Clean Interface">
+                        <div class="feature-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-row feature-reverse" data-feature="2">
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-number">02</span>
+                        <div class="feature-line"></div>
+                    </div>
+                    <h3 class="feature-title">Elegant Project Tree System</h3>
+                    <p class="feature-description">
+                        A refined and highly organized project tree for seamless navigation. Supports deep folder structures with smooth expansion and instant file access.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Deep folder structure support</li>
+                        <li>Smooth expansion animations</li>
+                        <li>Instant file access</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-wrapper">
+                        <img src="https://i.ibb.co/0pTcNzN2/kxjsn.jpg" alt="Project Tree">
+                        <div class="feature-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-row" data-feature="3">
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-number">03</span>
+                        <div class="feature-line"></div>
+                    </div>
+                    <h3 class="feature-title">Full Project Generation</h3>
+                    <p class="feature-description">
+                        Generate or refactor entire software projects from a single instruction. Supports frontend, backend, configuration files, and documentation.
+                    </p>
+                    <ul class="feature-list">
+                        <li>End-to-end project generation</li>
+                        <li>Multi-file editing capabilities</li>
+                        <li>Configuration & docs support</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-wrapper">
+                        <img src="https://i.ibb.co/SwcdgYyy/qh-hshwi.jpg" alt="Project Generation">
+                        <div class="feature-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-row feature-reverse" data-feature="4">
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-number">04</span>
+                        <div class="feature-line"></div>
+                    </div>
+                    <h3 class="feature-title">Dedicated AI Chat Panel</h3>
+                    <p class="feature-description">
+                        Integrated input field to communicate directly with the AI. Context-aware responses based on your open files and project structure.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Context-aware AI responses</li>
+                        <li>Project structure integration</li>
+                        <li>Real-time code assistance</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-wrapper">
+                        <img src="https://i.ibb.co/5gW5LyTc/sybzbz.jpg" alt="AI Chat Panel">
+                        <div class="feature-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-row" data-feature="5">
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-number">05</span>
+                        <div class="feature-line"></div>
+                    </div>
+                    <h3 class="feature-title">Conversation History Log</h3>
+                    <p class="feature-description">
+                        Persistent chat history for each project session. Track AI decisions, edits, and development flow over time.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Persistent session history</li>
+                        <li>Decision tracking</li>
+                        <li>Development flow visualization</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-wrapper">
+                        <img src="https://i.ibb.co/W41T85QT/uwgxb.jpg" alt="Chat History">
+                        <div class="feature-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-row feature-reverse" data-feature="6">
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-number">06</span>
+                        <div class="feature-line"></div>
+                    </div>
+                    <h3 class="feature-title">Comprehensive Analytics</h3>
+                    <p class="feature-description">
+                        Overview of files, structure, AI actions, and change activity. Designed to manage complexity in growing codebases.
+                    </p>
+                    <ul class="feature-list">
+                        <li>File structure overview</li>
+                        <li>AI action tracking</li>
+                        <li>Change activity monitoring</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-wrapper">
+                        <img src="https://i.ibb.co/rR4KdhCp/Picsart-26-02-11-23-31-02-404.png" alt="Project Analytics">
+                        <div class="feature-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 7 -->
+            <div class="feature-row" data-feature="7">
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-number">07</span>
+                        <div class="feature-line"></div>
+                    </div>
+                    <h3 class="feature-title">Workspace Customization</h3>
+                    <p class="feature-description">
+                        Full control over editor behavior and workspace layout. Adjust font size, tabs, auto-save, minimap, and more.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Customizable editor settings</li>
+                        <li>Font and theme adjustments</li>
+                        <li>Workspace layout control</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-wrapper">
+                        <img src="https://i.ibb.co/cXN7WdLX/Picsart-26-02-12-06-21-55-685.png" alt="Customization">
+                        <div class="feature-glow"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 8 -->
+            <div class="feature-row feature-reverse" data-feature="8">
+                <div class="feature-content">
+                    <div class="feature-meta">
+                        <span class="feature-number">08</span>
+                        <div class="feature-line"></div>
+                    </div>
+                    <h3 class="feature-title">Day & Night Mode</h3>
+                    <p class="feature-description">
+                        Switch instantly between dark and light themes. Optimized for long development sessions.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Instant theme switching</li>
+                        <li>Eye strain reduction</li>
+                        <li>Optimized for long sessions</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-image-wrapper">
+                        <img src="https://i.ibb.co/jv6wsWsV/1770877340242zbfrr4jcgq.jpg" alt="Day Night Mode">
+                        <div class="feature-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Download</span>
+                <h2 class="section-title">Choose your platform</h2>
+                <p class="section-subtitle">Available for Windows, macOS, and Linux. Start building with AI today.</p>
+            </div>
+
+            <div class="download-grid">
+                <!-- Windows -->
+                <div class="download-card available">
+                    <div class="download-header">
+                        <div class="download-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+                            </svg>
+                        </div>
+                        <div class="download-status">Available Now</div>
+                    </div>
+                    <h3 class="download-platform">Windows</h3>
+                    <p class="download-meta">Version 1.0.0 • 64-bit</p>
+                    <ul class="download-features">
+                        <li>Windows 10/11</li>
+                        <li>Auto-updater included</li>
+                        <li>Setup.exe installer</li>
+                    </ul>
+                    <a href="https://github.com/aymantaha-dev/ATIGAI-Code-Master/releases" class="btn btn-primary btn-full" target="_blank" rel="noopener">
+                        Download
+                        <svg class="btn-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- macOS -->
+                <div class="download-card coming-soon">
+                    <div class="download-header">
+                        <div class="download-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.31.71-3.06 1.56-.67.76-1.26 1.97-1.1 3.09 1.19.09 2.38-.61 3.08-1.54"/>
+                            </svg>
+                        </div>
+                        <div class="download-status soon">Coming Soon</div>
+                    </div>
+                    <h3 class="download-platform">macOS</h3>
+                    <p class="download-meta">Universal Binary</p>
+                    <ul class="download-features">
+                        <li>Intel & Apple Silicon</li>
+                        <li>macOS 12+</li>
+                        <li>.dmg installer</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-full" disabled>
+                        Notify Me
+                    </button>
+                </div>
+
+                <!-- Linux -->
+                <div class="download-card coming-soon">
+                    <div class="download-header">
+                        <div class="download-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.504 0c-.155 0-.315.008-.48.021-1.35.108-2.932.648-4.283 1.529C6.09 2.68 4.893 4.066 4.323 5.537c-.315.81-.473 1.774-.473 2.754 0 .678.08 1.335.236 1.96.316 1.195.835 2.32 1.528 3.32.693 1.002 1.535 1.865 2.486 2.553.95.688 1.997 1.2 3.09 1.518 1.092.318 2.23.447 3.37.38 1.14-.066 2.273-.32 3.355-.75 1.082-.43 2.09-1.03 2.99-1.77.9-.74 1.68-1.61 2.31-2.56.63-.95 1.09-1.98 1.37-3.06.28-1.08.37-2.2.27-3.3-.1-1.1-.38-2.17-.83-3.16-.45-.99-1.06-1.89-1.81-2.66-.75-.77-1.63-1.39-2.61-1.83-.98-.44-2.04-.68-3.12-.71-.18-.01-.36-.01-.53-.01zm-1.86 4.5c.67 0 1.29.18 1.83.49.54.31.98.75 1.29 1.28.31.53.47 1.13.47 1.77 0 .64-.16 1.24-.47 1.77-.31.53-.75.97-1.29 1.28-.54.31-1.16.49-1.83.49-.67 0-1.29-.18-1.83-.49-.54-.31-.98-.75-1.29-1.28-.31-.53-.47-1.13-.47-1.77 0-.64.16-1.24.47-1.77.31-.53.75-.97 1.29-1.28.54-.31 1.16-.49 1.83-.49z"/>
+                            </svg>
+                        </div>
+                        <div class="download-status soon">Coming Soon</div>
+                    </div>
+                    <h3 class="download-platform">Linux</h3>
+                    <p class="download-meta">AppImage & .deb</p>
+                    <ul class="download-features">
+                        <li>Ubuntu, Fedora, Arch</li>
+                        <li>Kernel 5.0+</li>
+                        <li>Multiple formats</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-full" disabled>
+                        Notify Me
+                    </button>
+                </div>
+            </div>
+
+            <div class="download-info">
+                <div class="info-card">
+                    <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <p>The initial release includes a Windows installer. Linux and macOS versions will be released soon. View all releases on <a href="https://github.com/aymantaha-dev/ATIGAI-Code-Master/releases" target="_blank" rel="noopener">GitHub</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security" id="about">
+        <div class="container">
+            <div class="security-grid">
+                <div class="security-content">
+                    <span class="section-eyebrow">Security</span>
+                    <h2 class="section-title">Your code stays private</h2>
+                    <p class="security-description">
+                        Secure, local-first architecture with no automatic cloud synchronization unless explicitly enabled. Your API keys are stored locally. Code never leaves your machine.
+                    </p>
+                    <div class="security-features">
+                        <div class="security-item">
+                            <div class="security-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <div class="security-item-content">
+                                <h4>Local API Key Storage</h4>
+                                <p>Your credentials never leave your device</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div class="security-item-content">
+                                <h4>No Cloud Lock-in</h4>
+                                <p>Complete control over your data</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-icon-wrap">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="security-item-content">
+                                <h4>Complete Data Privacy</h4>
+                                <p>Your code is yours alone</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="security-visual">
+                    <div class="security-badge-large">
+                        <div class="badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div class="badge-content">
+                            <span class="badge-label">Certified</span>
+                            <span class="badge-title">Local-First Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M130.000 22.830 C 112.375 22.995,97.792 23.298,96.200 23.534 C 92.505 24.080,88.974 24.704,87.000 25.159 C 83.246 26.025,80.174 26.918,79.820 27.247 C 79.611 27.441,79.037 27.600,78.544 27.600 C 78.051 27.600,77.536 27.780,77.400 28.000 C 77.264 28.220,76.876 28.400,76.538 28.400 C 76.199 28.400,73.847 29.390,71.312 30.600 C 68.776 31.810,66.616 32.800,66.511 32.800 C 66.149 32.800,56.190 39.006,55.600 39.599 C 55.490 39.709,54.590 40.425,53.600 41.188 C 36.972 54.015,25.040 75.465,22.444 97.200 C 21.150 108.033,21.155 292.490,22.450 303.200 C 24.525 320.366,32.364 337.643,43.551 349.708 C 44.348 350.567,45.145 351.526,45.322 351.839 C 46.578 354.057,59.194 363.633,65.381 367.064 C 71.420 370.413,79.913 373.768,84.856 374.757 C 85.815 374.948,87.950 375.381,89.600 375.718 C 98.009 377.434,95.807 377.401,200.000 377.376 C 309.626 377.349,301.375 377.530,314.209 374.871 C 319.356 373.805,329.579 369.956,333.718 367.526 C 334.772 366.907,335.724 366.400,335.833 366.400 C 336.374 366.400,345.328 360.133,347.600 358.164 C 351.862 354.472,352.083 354.262,355.084 351.061 C 365.236 340.234,372.357 327.290,375.583 313.800 C 378.377 302.114,378.200 309.751,378.200 201.000 C 378.200 94.063,378.276 97.924,375.954 87.600 C 374.219 79.886,370.028 69.573,366.363 64.000 C 360.776 55.505,359.412 53.751,354.235 48.400 C 350.792 44.842,347.392 41.757,345.443 40.423 C 344.979 40.106,344.510 39.733,344.400 39.595 C 343.166 38.042,331.872 31.756,325.000 28.797 C 319.679 26.506,310.868 24.413,302.000 23.333 C 296.194 22.626,186.311 22.305,130.000 22.830 M237.345 125.055 L 238.400 126.109 238.400 149.667 L 238.400 173.226 239.300 173.593 C 239.816 173.804,249.122 173.927,261.134 173.880 L 282.067 173.800 282.802 174.706 C 283.961 176.133,284.069 178.981,283.930 204.333 L 283.800 228.066 282.494 229.233 C 281.560 230.067,280.761 230.405,279.694 230.419 C 278.872 230.430,269.290 230.475,258.400 230.519 L 238.600 230.600 238.400 253.600 C 238.290 266.250,238.059 276.880,237.887 277.221 C 236.868 279.246,237.668 279.200,203.738 279.198 L 172.200 279.196 171.000 278.236 L 169.800 277.276 169.688 254.061 C 169.582 232.331,169.530 230.832,168.873 230.623 C 168.487 230.501,159.972 230.469,149.952 230.553 L 131.733 230.706 129.724 232.149 C 124.013 236.252,117.798 234.793,114.825 228.652 C 110.362 219.431,120.996 210.774,129.694 216.547 L 131.883 218.000 154.286 218.000 C 166.607 218.000,177.497 218.111,178.485 218.246 C 181.745 218.693,181.600 217.519,181.600 243.518 L 181.600 266.313 182.580 266.559 C 184.428 267.023,224.366 266.798,225.420 266.318 L 226.400 265.872 226.400 242.980 C 226.400 221.035,226.432 220.050,227.165 219.144 L 227.930 218.200 248.533 218.339 C 259.864 218.415,269.690 218.356,270.368 218.207 L 271.600 217.936 271.600 202.219 L 271.600 186.502 269.983 186.244 C 269.094 186.102,259.959 185.992,249.683 186.000 C 239.407 186.008,230.440 186.012,229.755 186.008 C 228.949 186.003,228.136 185.627,227.455 184.945 L 226.400 183.891 226.400 160.822 C 226.400 142.208,226.297 137.612,225.866 137.022 C 225.302 136.251,186.724 135.475,183.067 136.161 L 181.600 136.436 181.600 159.757 C 181.600 184.497,181.559 185.070,179.726 185.773 C 179.366 185.911,168.418 186.016,155.397 186.006 L 131.723 185.988 130.561 186.880 C 129.923 187.371,129.310 187.869,129.200 187.986 C 127.725 189.562,123.057 190.543,121.295 189.647 C 120.913 189.452,120.070 189.047,119.421 188.747 C 112.201 185.398,112.404 174.661,119.756 170.997 C 121.720 170.018,127.200 169.507,127.200 170.302 C 127.200 170.469,127.738 170.843,128.396 171.134 C 129.054 171.425,130.088 172.189,130.695 172.832 L 131.797 174.000 150.456 174.000 C 167.101 174.000,169.141 173.932,169.357 173.367 C 169.491 173.019,169.602 162.804,169.604 150.667 C 169.607 138.530,169.723 127.906,169.864 127.058 C 170.398 123.824,168.375 124.003,204.445 124.001 L 236.291 124.000 237.345 125.055" fill="currentColor"/>
+                        </svg>
+                        <div class="logo-text">
+                            <span class="logo-main">Code Master+</span>
+                            <span class="logo-sub">by ATIGAI</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">
+                        The ultimate AI-powered desktop development environment. Build, refactor, and scale your projects with advanced artificial intelligence.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#download">Download</a>
+                        <a href="changelog.html">Changelog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="license.html">License</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/aymantaha-dev/ATIGAI-Code-Master" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://github.com/aymantaha-dev/ATIGAI-Code-Master/issues" target="_blank" rel="noopener">Issues</a>
+                        <a href="https://github.com/aymantaha-dev/ATIGAI-Code-Master/discussions" target="_blank" rel="noopener">Discussions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Code Master+. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/aymantaha-dev/ATIGAI-Code-Master" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

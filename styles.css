@@ -410,9 +410,9 @@ a {
     width: 60%;
     height: 100%;
     background: linear-gradient(90deg, 
-        var(--color-purple-deep) 0%, 
-        rgba(26, 11, 46, 0.95) 30%,
-        rgba(26, 11, 46, 0.7) 60%,
+        rgba(0, 0, 0, 0.95) 0%, 
+        rgba(0, 0, 0, 0.8) 30%,
+        rgba(0, 0, 0, 0.4) 60%,
         transparent 100%
     );
 }
@@ -977,12 +977,9 @@ a {
         display: flex !important; 
     }
     
+    /* Show burger menu on mobile */
     .menu-toggle {
         display: flex !important;
-    }
-    
-    .mobile-menu {
-        top: 72px;
     }
     
     /* Mobile hero adjustments */
@@ -992,12 +989,16 @@ a {
         object-position: center;
     }
     
+    /* Black gradient from bottom - smaller height */
     .hero-overlay-left {
         width: 100%;
+        height: 70%;
+        top: auto;
+        bottom: 0;
         background: linear-gradient(0deg, 
-            var(--color-purple-deep) 0%, 
-            rgba(26, 11, 46, 0.95) 40%,
-            rgba(26, 11, 46, 0.7) 70%,
+            rgba(0, 0, 0, 0.98) 0%, 
+            rgba(0, 0, 0, 0.9) 30%,
+            rgba(0, 0, 0, 0.6) 60%,
             transparent 100%
         );
     }

@@ -63,6 +63,9 @@
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
     --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.03);
+
+    /* Layout */
+    --nav-height: 72px;
 }
 
 /* Reset */
@@ -127,13 +130,14 @@ a {
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
     transition: background var(--transition-base);
+    overflow: visible;
 }
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: var(--nav-height);
     padding: 0 var(--space-lg);
     max-width: 1280px;
     margin: 0 auto;
@@ -250,7 +254,7 @@ a {
 
 .mobile-menu {
     position: fixed;
-    top: 72px;
+    top: var(--nav-height);
     left: 0;
     right: 0;
     bottom: 0;

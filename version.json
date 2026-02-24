@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "downloadUrl": "https://github.com/aymantaha-dev/ATIGAI-Code-Master/releases/tag/download",
+  "releaseNotes": "Major update with new AI models and improved performance",
+  "releaseDate": "2026-02-15",
+  "mandatory": false,
+  "platforms": {
+    "win32": {
+      "url": "https://github.com/aymantaha-dev/ATIGAI-Code-Master/releases/download/download/ATIGAI-Code-Master-Setup-1.0.0-win.exe",
+      "size": "117MB",
+      "checksum": ""
+    }
+  },
+  "changelog": [
+    "🚀 Generate complete projects from structured prompts",
+    "📁 Understand and navigate project directory trees",
+    "✏️ Request and modify specific files when required",
+    "🖥️ Built-in code editor with structured workflow",
+    "💬 Session-based interaction per project",
+    "🎨 Clean and focused interface"
+  ]
+}

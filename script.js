@@ -1,5 +1,5 @@
 // ============================================
-// Code Master+ — Main JavaScript
+// Kincode+ — Main JavaScript
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {

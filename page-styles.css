@@ -1,5 +1,5 @@
 /* ============================================
-   Code Master+ — Page Styles (Changelog, Legal)
+   Code Master+ — Page Styles (Changelog, Legal, Downloads)
    ============================================ */
 
 .page-body {
@@ -31,6 +31,27 @@
 .page-content {
     padding: var(--space-3xl) 0;
 }
+
+/* Section Icons for Changelog */
+.section-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--space-xs);
+}
+
+.section-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.section-title-feature { color: #60a5fa; }
+.section-title-platform { color: #34d399; }
+.section-title-security { color: #fbbf24; }
+.section-title-breaking { color: #f87171; }
+.section-title-improvement { color: #a78bfa; }
 
 /* Changelog Specific */
 .changelog-container {
@@ -138,10 +159,6 @@
     gap: var(--space-xs);
 }
 
-.section-title-feature { color: #60a5fa; }
-.section-title-platform { color: #34d399; }
-.section-title-security { color: #fbbf24; }
-
 .entry-list {
     list-style: none;
     display: flex;
@@ -194,6 +211,9 @@
     margin-bottom: var(--space-md);
     padding-bottom: var(--space-sm);
     border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
 }
 
 .legal-section h3 {
@@ -201,6 +221,9 @@
     font-weight: 600;
     color: var(--color-text-primary);
     margin: var(--space-lg) 0 var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
 }
 
 .legal-section p {
@@ -232,6 +255,76 @@
     color: var(--color-accent-secondary);
 }
 
+/* License Box */
+.license-box {
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    margin: var(--space-xl) 0;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    position: relative;
+}
+
+.license-box pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+.license-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.license-header svg {
+    width: 24px;
+    height: 24px;
+    color: #fbbf24;
+}
+
+.license-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.copy-btn {
+    position: absolute;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--color-bg-hover);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.copy-btn:hover {
+    background: var(--color-border-hover);
+    color: var(--color-text-primary);
+}
+
+.copy-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
 .last-updated {
     display: inline-block;
     margin-top: var(--space-xl);
@@ -242,11 +335,266 @@
     color: var(--color-text-muted);
 }
 
+/* Downloads Page Styles */
+.downloads-hero {
+    padding: calc(72px + var(--space-3xl)) 0 var(--space-2xl);
+    background: var(--color-gradient-bg);
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.download-platform-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-2xl);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-platform-card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.download-platform-card.available {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.download-platform-card.available:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.platform-icon-large {
+    width: 64px;
+    height: 64px;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.platform-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+}
+
+.platform-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.platform-version {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+.platform-specs {
+    list-style: none;
+    margin: var(--space-lg) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.platform-specs li {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.platform-specs li svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-text-muted);
+}
+
+.release-notes {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.release-notes h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.release-notes h4 svg {
+    width: 14px;
+    height: 14px;
+}
+
+.all-releases {
+    margin-top: var(--space-3xl);
+    text-align: center;
+}
+
+.releases-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--space-xl);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+}
+
+.releases-table th,
+.releases-table td {
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.releases-table th {
+    background: var(--color-bg-tertiary);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+}
+
+.releases-table td {
+    color: var(--color-text-secondary);
+}
+
+.releases-table tr:hover td {
+    background: var(--color-bg-hover);
+    color: var(--color-text-primary);
+}
+
+.releases-table .version-cell {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.releases-table .date-cell {
+    color: var(--color-text-muted);
+}
+
+.releases-table .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-badge.stable {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.status-badge.beta {
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+}
+
+.status-badge.archived {
+    background: rgba(100, 116, 139, 0.1);
+    color: #64748b;
+}
+
+.download-btn-small {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0.5rem 1rem;
+    background: var(--color-text-primary);
+    color: var(--color-bg-primary);
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.download-btn-small:hover {
+    background: var(--color-accent-secondary);
+    transform: translateY(-1px);
+}
+
+.download-btn-small svg {
+    width: 14px;
+    height: 14px;
+}
+
 /* Footer Minimal */
 .footer-minimal {
     padding: var(--space-xl) 0;
     background: var(--color-bg-secondary);
     border-top: 1px solid var(--color-border);
+}
+
+/* ============================================
+   Download Info Card - For all screen sizes
+   ============================================ */
+.download-info {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 600px;
+    padding: 1.5rem;
+    background: var(--color-bg-tertiary, #16161c);
+    border: 1px solid var(--color-border, rgba(148, 163, 184, 0.08));
+    border-radius: 1rem;
+}
+
+.info-icon {
+    width: 20px;
+    height: 20px;
+    color: #94a3b8;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-card p {
+    font-size: 0.9375rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.info-card a {
+    color: #f8fafc;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.info-card a:hover {
+    color: #e2e8f0;
 }
 
 /* Responsive */
@@ -265,89 +613,40 @@
         padding: var(--space-lg);
         border-radius: var(--radius-lg);
     }
-}
-
-.section-icon {
-    display: inline-flex;
-    width: 16px;
-    height: 16px;
-}
-
-.section-icon svg {
-    width: 16px;
-    height: 16px;
-}
-
-/* Releases Page */
-.releases-layout {
-    max-width: 920px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xl);
-}
-
-.release-hero-card,
-.release-card,
-.release-notes-panel {
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-2xl);
-}
-
-.release-hero-card {
-    padding: var(--space-xl);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: var(--space-lg);
-}
-
-.release-hero-card h2 {
-    margin: var(--space-md) 0;
-}
-
-.release-hero-card p,
-.release-card p,
-.release-notes-panel p {
-    color: var(--color-text-secondary);
-}
-
-.release-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-lg);
-}
-
-.release-card {
-    padding: var(--space-lg);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-md);
-}
-
-.release-card h3,
-.release-notes-panel h3 {
-    font-size: 1.125rem;
-    font-weight: 700;
-}
-
-.release-notes-panel {
-    padding: var(--space-xl);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--space-lg);
-}
-
-@media (max-width: 900px) {
-    .release-grid {
+    
+    .license-box {
+        padding: var(--space-lg);
+    }
+    
+    .copy-btn {
+        position: static;
+        margin-top: var(--space-md);
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .downloads-grid {
         grid-template-columns: 1fr;
     }
-
-    .release-hero-card,
-    .release-notes-panel {
-        flex-direction: column;
-        align-items: flex-start;
+    
+    .releases-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .releases-table th,
+    .releases-table td {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.8125rem;
+    }
+    
+    /* Download Info Card - Mobile adjustments */
+    .download-info {
+        margin-top: 3rem;
+        padding: 0 1rem;
+    }
+    
+    .info-card {
+        padding: 1.25rem;
     }
 }

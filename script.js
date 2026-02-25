@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             var remainingSeconds = Math.ceil(delayMs / 1000);
             function renderLoadingState(seconds) {
-                link.innerHTML = '<span class="loading-spinner" aria-hidden="true"></span><span>Loading... (' + seconds + 's)</span>';
+                link.innerHTML = '<span class="loading-spinner" aria-hidden="true"></span><span>Loading... ' + seconds + 's</span>';
             }
 
             renderLoadingState(remainingSeconds);

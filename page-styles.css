@@ -544,6 +544,47 @@
     height: 14px;
 }
 
+
+.file-checksum {
+    margin-top: var(--space-sm);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    word-break: break-all;
+}
+
+.file-checksum code,
+.checksum-cell code {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.checksum-cell {
+    max-width: 320px;
+    word-break: break-all;
+}
+
+.delayed-download.is-loading,
+.download-btn-small.is-loading {
+    opacity: 0.8;
+}
+
+.loading-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 999px;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Footer Minimal */
 .footer-minimal {
     padding: var(--space-xl) 0;

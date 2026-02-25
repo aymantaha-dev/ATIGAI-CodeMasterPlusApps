@@ -74,4 +74,61 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Delayed download buttons (downloads page)
+    var delayedDownloads = document.querySelectorAll('.delayed-download');
+    for (var k = 0; k < delayedDownloads.length; k++) {
+        delayedDownloads[k].addEventListener('click', function(e) {
+            var link = this;
+            var targetUrl = link.getAttribute('href');
+            if (!targetUrl || link.dataset.loading === 'true') {
+                e.preventDefault();
+                return;
+            }
+
+            e.preventDefault();
+
+            var delayMs = parseInt(link.getAttribute('data-delay'), 10);
+            if (isNaN(delayMs) || delayMs < 0) {
+                delayMs = 5000;
+            }
+
+            var originalHtml = link.innerHTML;
+            var originalPointerEvents = link.style.pointerEvents;
+            var originalAriaDisabled = link.getAttribute('aria-disabled');
+            link.dataset.loading = 'true';
+            link.classList.add('is-loading');
+            link.style.pointerEvents = 'none';
+            link.setAttribute('aria-disabled', 'true');
+
+            var remainingSeconds = Math.ceil(delayMs / 1000);
+            function renderLoadingState(seconds) {
+                link.innerHTML = '<span class="loading-spinner" aria-hidden="true"></span><span>جاري التحميل... (' + seconds + 'ث)</span>';
+            }
+
+            renderLoadingState(remainingSeconds);
+
+            var timer = setInterval(function() {
+                remainingSeconds -= 1;
+                if (remainingSeconds > 0) {
+                    renderLoadingState(remainingSeconds);
+                    return;
+                }
+
+                clearInterval(timer);
+                link.innerHTML = originalHtml;
+                link.classList.remove('is-loading');
+                link.style.pointerEvents = originalPointerEvents;
+
+                if (originalAriaDisabled === null) {
+                    link.removeAttribute('aria-disabled');
+                } else {
+                    link.setAttribute('aria-disabled', originalAriaDisabled);
+                }
+
+                delete link.dataset.loading;
+                window.open(targetUrl, '_blank', 'noopener');
+            }, 1000);
+        });
+    }
 });

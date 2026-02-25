@@ -152,7 +152,8 @@ a {
 .logo-icon {
     width: 36px;
     height: 36px;
-    color: var(--color-accent-primary);
+    display: block;
+    object-fit: contain;
 }
 
 .logo-text {

@@ -1,22 +1,22 @@
 {
-  "version": "1.0.0",
-  "downloadUrl": "https://github.com/aymantaha-dev/Kincode-plus/releases/tag/download",
-  "releaseNotes": "Major update with new AI models and improved performance",
-  "releaseDate": "2026-02-15",
+  "version": "1.1.0",
+  "downloadUrl": "https://github.com/aymantaha-dev/Kincode-plus/releases/tag/v1.1.0",
+  "releaseNotes": "Improved GitHub integration, local Python AI workflow, and enhanced UI organization",
+  "releaseDate": "2026-03-10",
   "mandatory": false,
   "platforms": {
     "win32": {
-      "url": "https://github.com/aymantaha-dev/Kincode-plus/releases/download/download/Kincode-plus-Setup-1.0.0-win.exe",
-      "size": "117MB",
-      "checksum": ""
+      "url": "https://github.com/aymantaha-dev/Kincode-plus/releases/download/v1.1.0/KinCode-Plus-Setup-1.1.0-win.exe",
+      "size": "121MB",
+      "checksum": "3f4e8e201f2de38f5aeb65157ccf5b970f42e41f6d6f8a8916d3c5bc59af1101"
     }
   },
   "changelog": [
-    "🚀 Generate complete projects from structured prompts",
-    "📁 Understand and navigate project directory trees",
-    "✏️ Request and modify specific files when required",
-    "🖥️ Built-in code editor with structured workflow",
-    "💬 Session-based interaction per project",
-    "🎨 Clean and focused interface"
+    "🔗 Enhanced GitHub integration for easier linking and repository discovery",
+    "📦 Faster project upload workflow directly from the app",
+    "🐍 Added limited local Python environment with curated libraries",
+    "🧠 Reduced token usage with better local search and analysis support",
+    "🎨 Improved interface layout, sectioning, and element organization",
+    "⚡ Smoother overall usability and editing experience"
   ]
 }

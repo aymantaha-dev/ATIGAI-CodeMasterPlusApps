@@ -216,7 +216,10 @@
                 link.style.pointerEvents = 'none';
                 var remainingSeconds = Math.ceil(delayMs / 1000);
                 function render(seconds) {
-                    link.innerHTML = '<span class="loading-spinner" aria-hidden="true"></span><span>Loading... ' + seconds + 's</span>';
+                    var isArabic = document.documentElement.lang === 'ar';
+                    var loadingText = isArabic ? 'جارٍ التحميل...' : 'Loading...';
+                    var secondsSuffix = isArabic ? 'ث' : 's';
+                    link.innerHTML = '<span class="loading-spinner" aria-hidden="true"></span><span>' + loadingText + ' ' + seconds + secondsSuffix + '</span>';
                 }
                 render(remainingSeconds);
                 var timer = setInterval(function () {

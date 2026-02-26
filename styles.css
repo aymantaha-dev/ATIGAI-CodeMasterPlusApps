@@ -1129,3 +1129,35 @@ a {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+@media (max-width: 640px) {
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand .logo {
+        justify-content: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .footer-column h4 {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+    }
+
+    .footer-column a {
+        font-size: 0.8125rem;
+        margin-bottom: 0.45rem;
+    }
+}

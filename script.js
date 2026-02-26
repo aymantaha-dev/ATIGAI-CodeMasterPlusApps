@@ -3,6 +3,8 @@
 // ============================================
 
 (function () {
+    document.documentElement.classList.add('js-enabled');
+
     var STORAGE_LANG_KEY = 'kincode-language';
 
     function icon(name) {
@@ -11,7 +13,9 @@
             x: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>',
             globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>',
             github: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>',
-            twitter: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4l16 16"></path><path d="M20 4L4 20"></path></svg>',
+            facebook: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.25.2 2.25.2v2.46H15.2c-1.25 0-1.64.78-1.64 1.58V12h2.8l-.45 2.89h-2.35v6.99A10 10 0 0 0 22 12Z"></path></svg>',
+            instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>',
+            twitter: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2H21l-6.56 7.5L22.5 22h-6.33l-4.95-6.47L5.5 22H2.74l7.02-8.02L1.5 2h6.5l4.48 5.91L18.244 2Zm-2.22 18h1.75L7.05 3.9H5.17L16.024 20Z"></path></svg>',
             arrowUp: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>',
             copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>',
             check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>'
@@ -33,6 +37,14 @@
             var label = toggles[i].querySelector('.lang-label');
             if (label) {
                 label.textContent = normalized === 'ar' ? 'AR' : 'EN';
+            }
+        }
+
+        if (window.KinCodeArabic) {
+            if (normalized === 'ar') {
+                window.KinCodeArabic.apply();
+            } else {
+                window.KinCodeArabic.restore();
             }
         }
     }
@@ -181,7 +193,7 @@
         grid.innerHTML = '<div class="footer-column footer-brand"><a href="index.html" class="logo"><img class="logo-icon" src="logo.svg" alt="Kincode+ logo"><div class="logo-text"><span class="logo-main">Kincode+</span><span class="logo-sub">by ATIGAI</span></div></a><p class="footer-description">Professional AI-powered development environment for modern engineering teams.</p></div>' +
             '<div class="footer-column"><h4>Product</h4><a href="index.html#features">Features</a><a href="downloads.html">Downloads</a><a href="changelog.html">Changelog</a></div>' +
             '<div class="footer-column"><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="license.html">License</a></div>' +
-            '<div class="footer-column"><h4>Connect</h4><div class="footer-social"><a href="https://github.com/aymantaha-dev/Kincode-plus" target="_blank" rel="noopener" aria-label="GitHub">' + icon('github') + '</a><a href="https://x.com" target="_blank" rel="noopener" aria-label="X">' + icon('twitter') + '</a></div></div>';
+            '<div class="footer-column"><h4>Connect</h4><div class="footer-social"><a href="https://x.com" target="_blank" rel="noopener" aria-label="X">' + icon('twitter') + '</a><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">' + icon('facebook') + '</a><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">' + icon('instagram') + '</a></div></div>';
         container.insertBefore(grid, container.firstChild);
     }
 

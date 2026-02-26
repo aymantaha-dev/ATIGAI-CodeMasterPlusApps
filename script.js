@@ -19,51 +19,6 @@
         return icons[name] || '';
     }
 
-
-
-    var TRANSLATIONS = {
-        en: {
-            'nav.home':'Home','nav.features':'Features','nav.download':'Download','nav.downloads':'Downloads','nav.changelog':'Changelog','nav.about':'About',
-            'common.github':'GitHub','footer.privacy':'Privacy Policy','footer.terms':'Terms of Service','footer.license':'License',
-            'downloads.notify':'Notify Me','downloads.status':'Status','common.comingSoon':'Coming Soon','common.stable':'Stable'
-        },
-        ar: {
-            'nav.home':'الرئيسية','nav.features':'المميزات','nav.download':'تحميل','nav.downloads':'التحميلات','nav.changelog':'سجل التغييرات','nav.about':'حول',
-            'common.github':'جيت هب','footer.privacy':'سياسة الخصوصية','footer.terms':'شروط الخدمة','footer.license':'الترخيص',
-            'downloads.notify':'أبلغني','downloads.status':'الحالة','common.comingSoon':'قريبًا','common.stable':'مستقر'
-        }
-    };
-
-    function applyTranslations(lang) {
-        var dict = TRANSLATIONS[lang] || TRANSLATIONS.en;
-        var nodes = document.querySelectorAll('[data-i18n]');
-        for (var i = 0; i < nodes.length; i++) {
-            var key = nodes[i].getAttribute('data-i18n');
-            if (dict[key]) nodes[i].textContent = dict[key];
-        }
-    }
-
-
-    function ensureArabicScript(callback) {
-        if (window.KinCodeArabic) {
-            callback();
-            return;
-        }
-
-        var existing = document.querySelector('script[data-lang-script="ar"]');
-        if (existing) {
-            existing.addEventListener('load', callback, { once: true });
-            return;
-        }
-
-        var s = document.createElement('script');
-        s.src = 'language/ar.js';
-        s.defer = true;
-        s.setAttribute('data-lang-script', 'ar');
-        s.onload = callback;
-        document.head.appendChild(s);
-    }
-
     function applyLanguage(lang) {
         var normalized = lang === 'ar' ? 'ar' : 'en';
         document.documentElement.lang = normalized;
@@ -71,15 +26,6 @@
         document.body.classList.toggle('lang-ar', normalized === 'ar');
         document.body.classList.toggle('lang-en', normalized === 'en');
         localStorage.setItem(STORAGE_LANG_KEY, normalized);
-        applyTranslations(normalized);
-
-        if (normalized === 'ar') {
-            ensureArabicScript(function () {
-                if (window.KinCodeArabic && window.KinCodeArabic.apply) window.KinCodeArabic.apply();
-            });
-        } else if (window.KinCodeArabic && window.KinCodeArabic.restore) {
-            window.KinCodeArabic.restore();
-        }
 
         var toggles = document.querySelectorAll('[data-lang-toggle]');
         for (var i = 0; i < toggles.length; i++) {

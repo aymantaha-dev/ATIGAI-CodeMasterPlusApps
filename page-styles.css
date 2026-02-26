@@ -752,3 +752,17 @@
         justify-content: center;
     }
 }
+
+/* Premium downloads refinements */
+.downloads-hero .page-title { font-size: clamp(2rem, 5vw, 3.5rem); }
+.downloads-hero .page-subtitle { font-size: clamp(1rem, 1.4vw, 1.2rem); }
+.download-platform-card { transform: translateY(0); }
+.download-platform-card:hover { transform: translateY(-8px); }
+.version-tag.planned, .status-badge { display: inline-flex; align-items: center; gap: 6px; }
+.version-tag.planned svg, .status-badge svg { width: 14px; height: 14px; }
+.btn-full { min-height: 48px; }
+
+@media (max-width: 480px) {
+    .downloads-grid { grid-template-columns: 1fr; }
+    .download-platform-card { padding: var(--space-lg); }
+}

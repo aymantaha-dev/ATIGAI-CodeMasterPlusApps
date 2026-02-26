@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="favicon-tab.svg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="page-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="page-body">
     <nav class="navbar" id="navbar">
@@ -37,10 +37,10 @@
             
             <!-- Desktop Navigation -->
             <div class="nav-links desktop-only">
-                <a href="index.html#features" class="nav-link">Features</a>
-                <a href="downloads.html" class="nav-link">Downloads</a>
-                <a href="changelog.html" class="nav-link">Changelog</a>
-                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#features" class="nav-link"> <span data-i18n="nav.features">Features</span> </a>
+                <a href="downloads.html" class="nav-link"> <span data-i18n="nav.downloads">Downloads</span> </a>
+                <a href="changelog.html" class="nav-link"> <span data-i18n="nav.changelog">Changelog</span> </a>
+                <a href="index.html#about" class="nav-link"> <span data-i18n="nav.about">About</span> </a>
             </div>
 
             <div class="nav-actions desktop-only">
@@ -50,7 +50,7 @@
                     </svg>
                     GitHub
                 </a>
-                <a href="#download-latest" class="btn btn-primary">Download</a>
+                <a href="#download-latest" class="btn btn-primary"> <span data-i18n="nav.download">Download</span> </a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -64,10 +64,10 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <div class="mobile-menu-content">
-                <a href="index.html#features" class="mobile-link">Features</a>
-                <a href="downloads.html" class="mobile-link">Downloads</a>
-                <a href="changelog.html" class="mobile-link">Changelog</a>
-                <a href="index.html#about" class="mobile-link">About</a>
+                <a href="index.html#features" class="mobile-link"> <span data-i18n="nav.features">Features</span> </a>
+                <a href="downloads.html" class="mobile-link"> <span data-i18n="nav.downloads">Downloads</span> </a>
+                <a href="changelog.html" class="mobile-link"> <span data-i18n="nav.changelog">Changelog</span> </a>
+                <a href="index.html#about" class="mobile-link"> <span data-i18n="nav.about">About</span> </a>
                 <div class="mobile-actions">
                     <a href="https://github.com/aymantaha-dev/Kincode-plus" class="btn btn-ghost btn-full" target="_blank" rel="noopener">
                         <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -75,7 +75,7 @@
                         </svg>
                         GitHub
                     </a>
-                    <a href="#download-latest" class="btn btn-primary btn-full">Download</a>
+                    <a href="#download-latest" class="btn btn-primary btn-full"> <span data-i18n="nav.download">Download</span> </a>
                 </div>
             </div>
         </div>
@@ -159,7 +159,7 @@
                         <svg class="platform-icon-large" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.31.71-3.06 1.56-.67.76-1.26 1.97-1.1 3.09 1.19.09 2.38-.61 3.08-1.54"/>
                         </svg>
-                        <span class="version-tag planned">Coming Soon</span>
+                        <span class="version-tag planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg> <span data-i18n="common.comingSoon">Coming Soon</span> </span>
                     </div>
                     <h3 class="platform-name">macOS</h3>
                     <p class="platform-version">Universal Binary</p>
@@ -209,7 +209,7 @@
                         <svg class="platform-icon-large" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12.504 0c-.155 0-.315.008-.48.021-1.35.108-2.932.648-4.283 1.529C6.09 2.68 4.893 4.066 4.323 5.537c-.315.81-.473 1.774-.473 2.754 0 .678.08 1.335.236 1.96.316 1.195.835 2.32 1.528 3.32.693 1.002 1.535 1.865 2.486 2.553.95.688 1.997 1.2 3.09 1.518 1.092.318 2.23.447 3.37.38 1.14-.066 2.273-.32 3.355-.75 1.082-.43 2.09-1.03 2.99-1.77.9-.74 1.68-1.61 2.31-2.56.63-.95 1.09-1.98 1.37-3.06.28-1.08.37-2.2.27-3.3-.1-1.1-.38-2.17-.83-3.16-.45-.99-1.06-1.89-1.81-2.66-.75-.77-1.63-1.39-2.61-1.83-.98-.44-2.04-.68-3.12-.71-.18-.01-.36-.01-.53-.01zm-1.86 4.5c.67 0 1.29.18 1.83.49.54.31.98.75 1.29 1.28.31.53.47 1.13.47 1.77 0 .64-.16 1.24-.47 1.77-.31.53-.75.97-1.29 1.28-.54.31-1.16.49-1.83.49-.67 0-1.29-.18-1.83-.49-.54-.31-.98-.75-1.29-1.28-.31-.53-.47-1.13-.47-1.77 0-.64.16-1.24.47-1.77.31-.53.75-.97 1.29-1.28.54-.31 1.16-.49 1.83-.49z"/>
                         </svg>
-                        <span class="version-tag planned">Coming Soon</span>
+                        <span class="version-tag planned"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 15"></polyline></svg> <span data-i18n="common.comingSoon">Coming Soon</span> </span>
                     </div>
                     <h3 class="platform-name">Linux</h3>
                     <p class="platform-version">AppImage & .deb</p>
@@ -264,8 +264,8 @@
                             <th>Version</th>
                             <th>Date</th>
                             <th>Platform</th>
-                            <th>Status</th>
-                            <th>Download</th>
+                            <th> <span data-i18n="downloads.status">Status</span> </th>
+                            <th> <span data-i18n="nav.download">Download</span> </th>
                             <th>SHA256</th>
                         </tr>
                     </thead>
@@ -274,7 +274,7 @@
                             <td class="version-cell" data-label="Version">v1.0.0</td>
                             <td class="date-cell" data-label="Date">Feb 24, 2026</td>
                             <td data-label="Platform">Windows</td>
-                            <td data-label="Status"><span class="status-badge stable">Stable</span></td>
+                            <td data-label="Status"><span class="status-badge stable"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="9"></circle></svg> <span data-i18n="common.stable">Stable</span> </span></td>
                             <td data-label="Download">
                                 <a href="https://github.com/aymantaha-dev/KinCode-Plus/releases/download/untagged-ef963305a4bd892ebe1b/KinCode-Plus-Setup-1.0.0-win.exe" class="download-btn-small delayed-download" data-delay="5000" target="_blank" rel="noopener">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -290,7 +290,7 @@
                     </tbody>
                 </table>
                 <p style="text-align: center; margin-top: var(--space-xl); color: var(--color-text-muted);">
-                    View all releases on <a href="https://github.com/aymantaha-dev/Kincode-plus/releases" target="_blank" rel="noopener" style="color: var(--color-text-primary); text-decoration: underline;">GitHub</a>
+                    View all releases on <a href="https://github.com/aymantaha-dev/Kincode-plus/releases" target="_blank" rel="noopener" style="color: var(--color-text-primary); text-decoration: underline;"> <span data-i18n="common.github">GitHub</span> </a>
                 </p>
             </div>
 

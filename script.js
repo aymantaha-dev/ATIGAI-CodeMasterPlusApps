@@ -197,6 +197,55 @@
         container.insertBefore(grid, container.firstChild);
     }
 
+
+    function setupFeatureAlternation() {
+        var rows = document.querySelectorAll('#features .feature-row');
+        for (var i = 0; i < rows.length; i++) {
+            rows[i].classList.toggle('feature-reverse', i % 2 === 1);
+        }
+    }
+
+    function setupScrollReveal() {
+        var sections = document.querySelectorAll('.hero, .models-section, #features .section-header, #features .feature-row, .security, .info-section');
+        if (!sections.length) return;
+
+        var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) return;
+
+        var revealIndex = 0;
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].classList.add('scroll-reveal');
+            sections[i].style.setProperty('--reveal-index', revealIndex);
+            revealIndex += 1;
+        }
+
+        if (!('IntersectionObserver' in window)) {
+            for (var k = 0; k < sections.length; k++) {
+                sections[k].classList.add('is-revealed');
+            }
+            return;
+        }
+
+        var observer = new IntersectionObserver(function (entries, obs) {
+            for (var j = 0; j < entries.length; j++) {
+                if (!entries[j].isIntersecting) continue;
+                (function (target) {
+                    window.requestAnimationFrame(function () {
+                        target.classList.add('is-revealed');
+                    });
+                    obs.unobserve(target);
+                })(entries[j].target);
+            }
+        }, {
+            threshold: 0.08,
+            rootMargin: '0px 0px -8% 0px'
+        });
+
+        for (var x = 0; x < sections.length; x++) {
+            observer.observe(sections[x]);
+        }
+    }
+
     function setupDelayedDownloads() {
         var delayedDownloads = document.querySelectorAll('.delayed-download');
         for (var i = 0; i < delayedDownloads.length; i++) {
@@ -244,6 +293,8 @@
         setupFooterUpgrade();
         setupBackToTop();
         setupChecksumCopy();
+        setupFeatureAlternation();
+        setupScrollReveal();
         setupDelayedDownloads();
     });
 })();

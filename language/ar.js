@@ -13,8 +13,29 @@
         'Now Available': 'متاح الآن',
         'Build. Refactor. Scale.': 'ابنِ. أعد الهيكلة. وسّع.',
         'With AI.': 'بالذكاء الاصطناعي.',
-        'The ultimate AI-powered desktop development environment. Generate, modify, and review entire software projects with the world\'s most advanced AI models.': 'بيئة تطوير سطح مكتب متقدمة مدعومة بالذكاء الاصطناعي. أنشئ وعدّل وراجع مشاريع برمجية كاملة باستخدام أكثر نماذج الذكاء الاصطناعي تقدمًا في العالم.',
         'Get Started': 'ابدأ الآن',
+
+        'KinCode Plus is a secure AI coding assistant that helps you write, edit, refactor, and understand code with practical privacy controls.': 'كين كود بلس مساعد برمجي آمن بالذكاء الاصطناعي يساعدك على كتابة الشيفرة وتحريرها وإعادة هيكلتها وفهمها مع ضوابط خصوصية عملية.',
+        'AI-Assisted Multi-File Editing': 'تحرير متعدد الملفات بمساعدة الذكاء الاصطناعي',
+        'Get help updating and refactoring files across your existing codebase. KinCode Plus assists with implementation, cleanup, and explanation workflows.': 'احصل على مساعدة في تحديث الملفات وإعادة هيكلتها داخل قاعدة الشيفرة الحالية. يساعدك كين كود بلس في التنفيذ والتنظيف وشرح التغييرات.',
+        'Multi-file editing guidance': 'إرشاد لتحرير ملفات متعددة',
+        'Privacy is built into the product design: no telemetry, no tracking, no cloud syncing, and no data collection by KinCode Plus. API keys are encrypted and stored locally.': 'الخصوصية جزء من تصميم المنتج: لا قياس عن بُعد، لا تتبع، لا مزامنة سحابية، ولا جمع بيانات من كين كود بلس. يتم تشفير مفاتيح API وتخزينها محليًا.',
+        'No Tracking, No Telemetry': 'لا تتبع، لا قياس عن بُعد',
+        'Usage data is not collected by KinCode Plus': 'لا يجمع كين كود بلس بيانات الاستخدام',
+        'No Cloud Syncing': 'لا مزامنة سحابية',
+        'Cloud sync is not used for your source code': 'لا تُستخدم المزامنة السحابية لشيفرتك المصدرية',
+        'Secure AI Coding Assistant for developers who value privacy, control, and thoughtful AI support.': 'مساعد برمجي آمن بالذكاء الاصطناعي للمطورين الذين يقدّرون الخصوصية والتحكم والدعم الذكي المتزن.',
+        'FAQ': 'الأسئلة الشائعة',
+
+        'FAQ — Kincode+': 'الأسئلة الشائعة — كين كود+',
+        'Is KinCode Plus free?': 'هل كين كود بلس مجاني؟',
+        'How does pricing work?': 'كيف يعمل التسعير؟',
+        'Are API keys stored locally?': 'هل تُخزَّن مفاتيح API محليًا؟',
+        'Does my code leave my computer?': 'هل يغادر الكود جهازي؟',
+        'Is it open source?': 'هل هو مفتوح المصدر؟',
+        'Is the Windows app digitally signed?': 'هل تطبيق ويندوز موقّع رقميًا؟',
+        'Will macOS/Linux versions be released?': 'هل ستصدر نسخ macOS وLinux؟',
+        'Secure AI Coding Assistant for developers who value privacy and control.': 'مساعد برمجي آمن بالذكاء الاصطناعي للمطورين الذين يقدّرون الخصوصية والتحكم.',
         'Explore Features': 'استكشف المميزات',
         'AI Models': 'نماذج الذكاء الاصطناعي',
         'Platforms': 'المنصات',
@@ -33,9 +54,6 @@
         'Deep folder structure support': 'دعم هياكل مجلدات عميقة',
         'Smooth expansion animations': 'حركات توسع سلسة',
         'Instant file access': 'وصول فوري للملفات',
-        'Full Project Generation': 'توليد مشروع كامل',
-        'Generate or refactor entire software projects from a single instruction. Supports frontend, backend, configuration files, and documentation.': 'أنشئ أو أعد هيكلة مشاريع برمجية كاملة من توجيه واحد. يدعم الواجهة الأمامية والخلفية وملفات الإعدادات والتوثيق.',
-        'End-to-end project generation': 'توليد مشروع من البداية للنهاية',
         'Multi-file editing capabilities': 'إمكانيات تحرير متعددة الملفات',
         'Configuration & docs support': 'دعم الإعدادات والتوثيق',
         'Dedicated AI Chat Panel': 'لوحة دردشة ذكاء اصطناعي مخصصة',
@@ -75,7 +93,6 @@
         'Your code is yours alone': 'شفرتك ملكك وحدك',
         'Certified': 'معتمد',
         'Local-First Architecture': 'بنية محلية أولًا',
-        'The ultimate AI-powered desktop development environment. Build, refactor, and scale your projects with advanced artificial intelligence.': 'أفضل بيئة تطوير سطح مكتب مدعومة بالذكاء الاصطناعي. ابنِ وأعد الهيكلة ووسّع مشاريعك بذكاء اصطناعي متقدم.',
         'Product': 'المنتج',
         'Legal': 'القانونية',
         'Connect': 'تواصل',
@@ -100,7 +117,6 @@
         'Download for Windows': 'تحميل لويندوز',
         'SHA256:': 'SHA256:',
         'Release Notes': 'ملاحظات الإصدار',
-        'Initial release with full Windows support, 15+ AI models, and complete project generation capabilities.': 'الإصدار الأول بدعم كامل لويندوز و15+ نموذج ذكاء اصطناعي وإمكانيات توليد مشاريع كاملة.',
         'Coming Soon': 'قريبًا',
         'macOS': 'ماك أو إس',
         'Universal Binary': 'ثنائي شامل',
@@ -242,7 +258,64 @@
         'End User License Agreement (EULA)': 'اتفاقية ترخيص المستخدم النهائي (EULA)',
         'Intellectual Property': 'الملكية الفكرية',
         'All title, ownership rights, and intellectual property rights in and to the Software and any copies thereof are owned by ATIGAI. The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties.': 'جميع حقوق الملكية وحقوق الملكية الفكرية المتعلقة بالبرنامج وأي نسخ منه مملوكة لـ ATIGAI. البرنامج محمي بقوانين حقوق النشر والمعاهدات الدولية ذات الصلة بالإضافة إلى قوانين ومعاهدات الملكية الفكرية الأخرى.',
-        'For license-related questions, please open an issue on our': 'للاستفسارات المتعلقة بالترخيص، يرجى فتح مشكلة على'
+        'For license-related questions, please open an issue on our': 'للاستفسارات المتعلقة بالترخيص، يرجى فتح مشكلة على',
+
+        'Philosophy': 'الفلسفة',
+        'Built to assist developers, not replace them.': 'مصمم لمساعدة المطورين لا لاستبدالهم.',
+        'KinCode Plus supports developer judgment and ownership instead of automating decisions away.': 'يدعم كين كود بلس قرار المطور وملكيته للعمل بدلًا من إلغاء دوره.',
+        'Privacy is a design principle, not a marketing add-on.': 'الخصوصية مبدأ تصميم أساسي وليست ميزة دعائية.',
+        'API keys are encrypted and stored locally on your device.': 'تُشفَّر مفاتيح API وتُخزَّن محليًا على جهازك.',
+        'Python execution runs in a controlled sandbox with intentional limits to reduce misuse risk.': 'يعمل تنفيذ بايثون داخل بيئة معزولة خاضعة للتحكم وبحدود مقصودة لتقليل مخاطر إساءة الاستخدام.',
+        'How It Works': 'كيف يعمل',
+        'Simple architecture with direct control.': 'بنية بسيطة وتحكم مباشر.',
+        'You provide your own API key.': 'أنت توفّر مفتاح API الخاص بك.',
+        'Keys are stored locally in a protected environment.': 'تُخزَّن المفاتيح محليًا داخل بيئة محمية.',
+        'Code is sent directly to your selected AI provider.': 'يُرسَل الكود مباشرةً إلى مزوّد الذكاء الاصطناعي الذي تختاره.',
+        'KinCode Plus does not proxy or store model requests.': 'لا يقوم كين كود بلس بتمرير الطلبات عبر خوادمه أو تخزينها.',
+        'Execution stays within controlled boundaries.': 'يبقى التنفيذ ضمن حدود تشغيل مضبوطة.',
+        'Cost Transparency': 'وضوح التكلفة',
+        'Free application, provider-based usage costs.': 'تطبيق مجاني بالكامل وتكلفة الاستخدام لدى المزوّد فقط.',
+        'KinCode Plus is completely free to install and use.': 'كين كود بلس مجاني بالكامل للتنزيل والاستخدام.',
+        "You only pay your chosen AI provider under that provider's pricing.": 'أنت تدفع فقط لمزوّد الذكاء الاصطناعي الذي تختاره وفق تسعيره.',
+        'No subscriptions and no hidden fees from KinCode Plus.': 'لا توجد اشتراكات أو رسوم مخفية من كين كود بلس.',
+        'Roadmap': 'الرؤية المستقبلية',
+        'Long-term direction without date promises.': 'اتجاه طويل المدى دون وعود زمنية.',
+        'Future professional upgrade for local model hosting.': 'ترقية احترافية مستقبلية لاستضافة النماذج محليًا.',
+        'Advanced project intelligence for larger codebases.': 'ذكاء مشروع متقدم لقواعد الشيفرة الكبيرة.',
+        'Extended sandbox capabilities with controlled safety boundaries.': 'قدرات موسعة للبيئة المعزولة ضمن حدود أمان مضبوطة.',
+        'A clear professional upgrade path for teams that need more control.': 'مسار ترقية احترافي واضح للفرق التي تحتاج تحكمًا أوسع.',
+        'Community': 'المجتمع',
+        'Stay connected as the community grows.': 'ابقَ على تواصل مع نمو المجتمع.',
+        'Follow updates, join future community channels, and star the repository on GitHub.': 'تابع التحديثات، وانضم إلى قنوات المجتمع المستقبلية، وضع نجمة للمستودع على GitHub.',
+        'Common questions about KinCode Plus.': 'إجابات مختصرة عن الأسئلة الأكثر شيوعًا حول كين كود بلس.',
+        'Click any question to expand the answer.': 'اضغط على أي سؤال لإظهار الإجابة.',
+        'Yes. The application is completely free to install and use.': 'نعم. التطبيق مجاني بالكامل للتنزيل والاستخدام.',
+        "You only pay your selected AI provider based on that provider's own pricing. KinCode Plus does not charge subscriptions or hidden fees.": 'أنت تدفع فقط لمزوّد الذكاء الاصطناعي الذي تختاره وفق تسعيره الخاص. كين كود بلس لا يفرض اشتراكات أو رسومًا مخفية.',
+        'Yes. API keys are encrypted and stored locally in a protected environment on your device.': 'نعم. يتم تشفير مفاتيح API وتخزينها محليًا داخل بيئة محمية على جهازك.',
+        'Only when you explicitly request AI assistance. Relevant code is sent directly to your selected provider, and KinCode Plus does not proxy or store those requests.': 'فقط عندما تطلب مساعدة الذكاء الاصطناعي بشكل صريح. يُرسَل الجزء المطلوب مباشرةً إلى المزوّد الذي اخترته، ولا يقوم كين كود بلس بتمرير هذه الطلبات عبر خوادمه أو تخزينها.',
+        'The repository is available on GitHub. Please review the published license to understand reuse and distribution conditions.': 'المستودع متاح على GitHub. يُرجى مراجعة الترخيص المنشور لفهم شروط إعادة الاستخدام والتوزيع.',
+        'Digital signing is part of the release quality roadmap. Please review release notes for the latest status before managed deployment.': 'التوقيع الرقمي جزء من خارطة جودة الإصدارات. يُرجى مراجعة ملاحظات الإصدار لمعرفة الحالة الأحدث قبل النشر في البيئات المُدارة.',
+        'Cross-platform support remains a long-term goal. Updates are shared through official release channels without fixed date commitments.': 'دعم المنصات المختلفة هدف طويل المدى. تُنشر التحديثات عبر القنوات الرسمية دون التزام بمواعيد محددة.',
+        'Rules and legal responsibilities for using KinCode Plus.': 'القواعد والمسؤوليات القانونية لاستخدام كين كود بلس.',
+        'Product Scope': 'نطاق المنتج',
+        'Accounts and API Keys': 'الحسابات ومفاتيح API',
+        'Data Flow and Privacy': 'تدفق البيانات والخصوصية',
+        'Controlled Execution': 'التنفيذ ضمن بيئة مضبوطة',
+        'Acceptable Use': 'الاستخدام المقبول',
+        'By downloading, installing, or using KinCode Plus (the "Software"), you agree to these Terms of Service. If you do not agree, you must not use the Software.': 'عند تنزيل كين كود بلس («البرنامج») أو تثبيته أو استخدامه، فإنك توافق على شروط الخدمة هذه. إذا لم توافق عليها، فيجب عليك عدم استخدام البرنامج.',
+        'KinCode Plus is a secure AI coding assistant. It helps developers write, edit, refactor, and understand existing code. It is not an autonomous project generator.': 'كين كود بلس هو مساعد برمجي آمن بالذكاء الاصطناعي. يساعد المطورين على كتابة الشيفرة وتحريرها وإعادة هيكلتها وفهمها. وليس مولّد مشاريع مستقل بالكامل.',
+        'You provide your own API key from a supported provider. Keys are encrypted and stored locally on your device in a protected environment.': 'أنت توفّر مفتاح API الخاص بك من مزوّد مدعوم. يتم تشفير المفاتيح وتخزينها محليًا على جهازك داخل بيئة محمية.',
+        'When you request AI assistance, relevant code and prompts are sent directly to your selected AI provider. KinCode Plus does not proxy or store those requests. The app does not include telemetry, tracking, cloud syncing, or background data collection by default.': 'عند طلبك مساعدة الذكاء الاصطناعي، يتم إرسال الشيفرة والتعليمات ذات الصلة مباشرةً إلى مزوّد الذكاء الاصطناعي الذي تختاره. لا يقوم كين كود بلس بتمرير تلك الطلبات عبر خوادمه أو تخزينها. ولا يتضمن التطبيق قياسًا عن بُعد أو تتبعًا أو مزامنة سحابية أو جمع بيانات في الخلفية بشكل افتراضي.',
+        'Python and tool execution features operate inside controlled boundaries and intentionally limited environments to reduce misuse risk.': 'تعمل ميزات تنفيذ بايثون والأدوات ضمن حدود تشغيل مضبوطة وبيئات محدودة عمدًا لتقليل مخاطر إساءة الاستخدام.',
+        'AI providers and external services you choose are governed by their own terms, privacy policies, and pricing. You are responsible for reviewing and accepting those terms.': 'تخضع مزوّدات الذكاء الاصطناعي والخدمات الخارجية التي تختارها لشروطها وسياسات الخصوصية والتسعير الخاصة بها. وتقع على عاتقك مسؤولية مراجعة تلك الشروط والموافقة عليها.',
+        'You agree not to use the Software for illegal activity, abuse, malware development, unauthorized data access, or violations of applicable law.': 'تتعهد بعدم استخدام البرنامج في أنشطة غير قانونية أو إساءة استخدام أو تطوير برمجيات خبيثة أو وصول غير مصرح به إلى البيانات أو أي مخالفة للقوانين المعمول بها.',
+        'The Software is provided "as is" without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, and non-infringement.': 'يتم تقديم البرنامج "كما هو" دون أي ضمانات صريحة أو ضمنية، بما في ذلك قابلية التسويق أو الملاءمة لغرض محدد أو عدم الانتهاك.',
+        'To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business interruption.': 'إلى أقصى حد يسمح به القانون، لا نتحمل المسؤولية عن الأضرار غير المباشرة أو العرضية أو الخاصة أو التبعية أو العقابية، بما في ذلك خسارة الأرباح أو البيانات أو انقطاع الأعمال.',
+        'We may update these Terms from time to time. Updated terms become effective when published on the official website.': 'قد نقوم بتحديث هذه الشروط من وقت لآخر. وتصبح الشروط المحدّثة نافذة عند نشرها على الموقع الرسمي.',
+        'For questions about these Terms, open an issue on the': 'للأسئلة حول هذه الشروط، يمكنك فتح تذكرة عبر',
+        'Last Updated: February 28, 2026': 'آخر تحديث: 28 فبراير 2026',
+        'THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.': 'يتم توفير البرنامج "كما هو" دون أي ضمان من أي نوع، سواء كان صريحًا أو ضمنيًا، بما في ذلك على سبيل المثال لا الحصر ضمانات القابلية للتسويق أو الملاءمة لغرض معين أو عدم الانتهاك.'
+
     };
 
     function translateOne(text) {
@@ -251,6 +324,12 @@
     }
 
     function apply() {
+        if (!window.__kincodeOriginalTitle) {
+            window.__kincodeOriginalTitle = document.title;
+        }
+        var translatedTitle = translateOne(window.__kincodeOriginalTitle);
+        if (translatedTitle) document.title = translatedTitle;
+
         if (!window.__kincodeOriginalTexts) {
             window.__kincodeOriginalTexts = [];
             var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
@@ -281,6 +360,9 @@
     }
 
     function restore() {
+        if (window.__kincodeOriginalTitle) {
+            document.title = window.__kincodeOriginalTitle;
+        }
         if (!window.__kincodeOriginalTexts) return;
         for (var i = 0; i < window.__kincodeOriginalTexts.length; i++) {
             var item = window.__kincodeOriginalTexts[i];

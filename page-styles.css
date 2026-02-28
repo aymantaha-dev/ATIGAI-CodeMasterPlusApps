@@ -766,3 +766,123 @@
     .downloads-grid { grid-template-columns: 1fr; }
     .download-platform-card { padding: var(--space-lg); }
 }
+
+/* Language visibility helpers */
+.lang-ar-inline,
+.lang-ar-block {
+    display: none;
+}
+
+body.lang-ar .lang-en-inline,
+body.lang-ar .lang-en-block {
+    display: none;
+}
+
+body.lang-ar .lang-ar-inline {
+    display: inline;
+}
+
+body.lang-ar .lang-ar-block {
+    display: block;
+}
+
+html[dir='rtl'] .legal-section h2,
+html[dir='rtl'] .legal-section h3,
+html[dir='rtl'] .entry-section h3 {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+html[dir='rtl'] .legal-section ul,
+html[dir='rtl'] .entry-list li {
+    margin-left: 0;
+    margin-right: var(--space-lg);
+}
+
+html[dir='rtl'] .entry-list li {
+    padding-left: 0;
+    padding-right: 1.25rem;
+}
+
+html[dir='rtl'] .entry-list li::before {
+    left: auto;
+    right: 0;
+}
+
+/* FAQ accordion */
+.faq-container {
+    max-width: 860px;
+}
+
+.faq-intro {
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-muted);
+}
+
+.faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    background: var(--color-bg-tertiary);
+    margin-bottom: var(--space-md);
+    overflow: hidden;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: var(--space-md) var(--space-lg);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+}
+
+.faq-answer {
+    padding: 0 var(--space-lg) var(--space-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    border-top: 1px solid var(--color-border);
+}
+
+html[dir='rtl'] .faq-item summary {
+    text-align: right;
+}
+
+
+/* Legal/FAQ/Downloads RTL completeness */
+html[dir='rtl'] .page-header,
+html[dir='rtl'] .page-content,
+html[dir='rtl'] .legal-container,
+html[dir='rtl'] .downloads-hero,
+html[dir='rtl'] .download-platform-card,
+html[dir='rtl'] .download-info,
+html[dir='rtl'] .faq-container {
+    text-align: right;
+}
+
+html[dir='rtl'] .releases-table th,
+html[dir='rtl'] .releases-table td {
+    text-align: right;
+}
+
+html[dir='rtl'] .platform-specs li,
+html[dir='rtl'] .entry-list li {
+    justify-content: flex-start;
+}
